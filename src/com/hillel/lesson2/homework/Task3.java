@@ -16,11 +16,13 @@ public class Task3 {
         int h = b;
         double j = f;
 
-        String str1 = Long.toString(a + b + c) + Double.toString(d + e + c);
+        double x = a + b + c + d + e + f;
 
 
+        String str = Double.toString(x);
 
-        System.out.println(str1);
+
+        System.out.println(str);
 
 
 
