@@ -7,42 +7,31 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        Scanner myName = new Scanner(System.in);
+        Scanner myScanner = new Scanner(System.in);
         System.out.println("Введите Ваше имя:");
-        String name = myName.nextLine();
+        String name = myScanner.nextLine();
 
 
-        Scanner mySurmane = new Scanner(System.in);
         System.out.println("Введите Вашу фамилию:");
-        String surname = mySurmane.nextLine();
+        String surname = myScanner.nextLine();
 
 
-        Scanner myAge = new Scanner(System.in);
         System.out.println("Укажите сколько Вам полных лет:");
-        int age = myAge.nextInt();
+        String age = myScanner.nextLine();
 
 
-//        if (myAge.hasNextInt()) {
-//            int age = myAge.nextInt();
-//        }
-//        else {
-//            System.out.println("Нужно ввести возраст!");
-//        }
-
-        Scanner myMail = new Scanner(System.in);
+//        Scanner myMail = new Scanner(System.in);
         System.out.println("Введите Вашу почту для регистрации:");
-        String mail = myMail.nextLine();
+        String mail = myScanner.nextLine();
 
 
-        Scanner myAbout = new Scanner(System.in);
+ //       Scanner myAbout = new Scanner(System.in);
         System.out.println("Напишите несколько слов о себе:");
-        String about = myAbout.nextLine();
+        String about = myScanner.nextLine();
 
-        myName.close();
-        mySurmane.close();
-        myAge.close();
-        myMail.close();
-        myAbout.close();
+        myScanner.close();
+//        myMail.close();
+
 
 
 
