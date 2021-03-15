@@ -9,12 +9,12 @@ public class Task5 {
 
     public static void main(String[] args) {
 
-        System.out.println(getMyWageRandom());
-        System.out.println(getMyWageMathRandom());
+        System.out.println(myWageRandom());
+        System.out.println(myWageMathRandom());
 
     }
 
-        public static int getMyWageRandom() {
+        public static int myWageRandom() {
 
 
             int dif = maxWage - minWage;
@@ -25,7 +25,7 @@ public class Task5 {
             return wageRandom;
         }
 
-    public static int getMyWageMathRandom(){
+    public static int myWageMathRandom(){
 
         int wageMathRrandom = minWage + (int)(Math.random()*((maxWage-minWage)+1));
 
