@@ -4,20 +4,32 @@ import java.util.Random;
 
 public class Task5 {
 
+    static int minWage = 5000;
+    static int maxWage = 10000;
+
     public static void main(String[] args) {
 
-        int minWage = 5000;
-        int maxWage = 10000;
-        int dif = maxWage - minWage;
+        System.out.println(getMyWageRandom());
+        System.out.println(getMyWageMathRandom());
 
-        Random myWage = new Random();
-        int wage = myWage.nextInt(dif + 1);
-        wage += minWage;
-        System.out.println("Ваша зароботная плата за этот месяц сосавляет: " + wage + "$");
+    }
+
+        public static int getMyWageRandom() {
 
 
+            int dif = maxWage - minWage;
 
+            Random myWage = new Random();
+            int wageRandom = myWage.nextInt(dif + 1);
+            wageRandom += minWage;
+            return wageRandom;
+        }
 
+    public static int getMyWageMathRandom(){
+
+        int wageMathRrandom = minWage + (int)(Math.random()*((maxWage-minWage)+1));
+
+        return wageMathRrandom;
     }
 
 
