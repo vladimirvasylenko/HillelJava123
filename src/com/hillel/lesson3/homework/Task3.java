@@ -13,7 +13,7 @@ public class Task3 {
         newScan.close();
 
         Random newRand = new Random();
-        int finalRand = newRand.nextInt(scr)+1;
+        int finalRand = newRand.nextInt(scr) + 1;
         System.out.println("Поздравляем с победой участника под номером № " + finalRand);
     }
 }

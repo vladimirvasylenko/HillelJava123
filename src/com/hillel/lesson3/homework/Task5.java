@@ -8,30 +8,22 @@ public class Task5 {
     static int maxWage = 10000;
 
     public static void main(String[] args) {
-
-        System.out.println(myWageRandom());
-        System.out.println(myWageMathRandom());
-
+        System.out.println("My random wage is: " + myWageRandom() + "$");
+        System.out.println("My math random wage is: " + myWageMathRandom() + "$");
     }
 
-        public static int myWageRandom() {
+    public static int myWageRandom() {
+        int dif = maxWage - minWage;
+        Random myWage = new Random();
+        int wageRandom = myWage.nextInt(dif + 1);
+        wageRandom += minWage;
+        return wageRandom;
+    }
 
-
-            int dif = maxWage - minWage;
-
-            Random myWage = new Random();
-            int wageRandom = myWage.nextInt(dif + 1);
-            wageRandom += minWage;
-            return wageRandom;
-        }
-
-    public static int myWageMathRandom(){
-
-        int wageMathRrandom = minWage + (int)(Math.random()*((maxWage-minWage)+1));
-
+    public static int myWageMathRandom() {
+        int wageMathRrandom = minWage + (int) (Math.random() * ((maxWage - minWage) + 1));
         return wageMathRrandom;
     }
-
 
 
 }

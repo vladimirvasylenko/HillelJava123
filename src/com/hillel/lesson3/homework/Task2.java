@@ -17,7 +17,6 @@ public class Task2 {
 
         double summall = intrnd1 + intrnd2 + intrnd3 + dblrnd1 + dblrnd2 + dblrnd3;
 
-
         System.out.println(summall);
     }
 }
