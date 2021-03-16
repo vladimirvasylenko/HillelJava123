@@ -7,8 +7,8 @@ public class Task6 {
 
         Task6 myMath = new Task6();
 
-        System.out.println(myMath.addition(1, 2));
-        System.out.println(myMath.subtraction(6, 2));
+        System.out.println(Task6.addition(1, 2));
+        System.out.println(Task6.subtraction(6, 2));
         System.out.println(myMath.devise(5, 2));
         System.out.println(myMath.multiply(5.3, 2));
     }
