@@ -7,28 +7,16 @@ public class Task1 {
 
 
     public static void main(String[] args) {
-
-//        int a = 0;
-//        int b = 10;
-//
-//        while (a < b) {
-//            a = a + 1;
-//            System.out.print(a + " ");
-//        }
-
         System.out.print(whileDigit());
     }
 
     public static int whileDigit() {
+        int a = 1;
+        while (a < 10) {
 
-        int a = 0;
-        int b = 10;
-
-        while (a < b) {
-            a++;
             System.out.print(a + " ");
+            a++;
         }
         return a;
-
     }
 }
