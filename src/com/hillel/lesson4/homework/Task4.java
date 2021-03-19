@@ -6,15 +6,12 @@ public class Task4 {
     Реализовать в отдельном методе.*/
 
     public static void main(String[] args) {
-        System.out.println(" " + digits());
+        Task4.digits();
     }
 
-    public static int digits() {
-        int i = 0;
-
-        for (i = 100; i > 0; i = i - 10) {
+    public static void digits() {
+        for (int i = 100; i > -1; i = i - 10) {
             System.out.print(" " + i);
         }
-        return i;
     }
 }

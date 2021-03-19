@@ -6,17 +6,17 @@ public class Task3 {
     Реализовать в отдельном методе.*/
 
     public static void main(String[] args) {
-        System.out.print(" " + digit());
+        Task3.digit();
     }
 
-    public static int digit() {
-        int a = 100;
-        int b = 0;
-        while (a > b) {
-            System.out.print(" " + a);
+    public static void digit() {
+        int a = 110;
+
+        while (a > 0) {
             a = a - 10;
+            System.out.print(" " + a);
         }
 
-        return a;
+
     }
 }

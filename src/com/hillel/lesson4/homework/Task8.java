@@ -22,7 +22,7 @@ public class Task8 {
         if (currentYear - inpudedAge < 18) {
             System.out.println("Вход строго с 18 лет");
         } else if (currentYear - inpudedAge > 50) {
-            System.out.println("Вам будет не интересно на этом сайте");
+            System.out.println("Вам будет не интересно на этом сайте.");
         } else {
             System.out.println("Добро пожаловать");
         }

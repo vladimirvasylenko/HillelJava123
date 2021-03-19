@@ -7,16 +7,13 @@ public class Task1 {
 
 
     public static void main(String[] args) {
-        System.out.print(whileDigit());
+        Task1.digits();
     }
 
-    public static int whileDigit() {
-        int a = 1;
-        while (a < 10) {
-
+    public static void digits() {
+        int a = 0;
+        while (a++ < 10) {
             System.out.print(a + " ");
-            a++;
         }
-        return a;
     }
 }
