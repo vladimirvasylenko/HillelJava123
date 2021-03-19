@@ -6,7 +6,7 @@ public class Task4 {
     Реализовать в отдельном методе.*/
 
     public static void main(String[] args) {
-        Task4.digits();
+        digits();
     }
 
     public static void digits() {

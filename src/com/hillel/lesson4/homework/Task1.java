@@ -7,7 +7,7 @@ public class Task1 {
 
 
     public static void main(String[] args) {
-        Task1.digits();
+        digits();
     }
 
     public static void digits() {
