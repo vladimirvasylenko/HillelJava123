@@ -1,5 +1,6 @@
 package com.hillel.lesson5.homework;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task2 {
@@ -8,20 +9,21 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        Scanner scannerDigits = new Scanner(System.in);
+        Scanner digits = new Scanner(System.in);
         System.out.println("Введите 5 чисел: ");
 
         int[] myArray = new int[5];
-
         for (int i = 0; i < myArray.length; i++) {
-            myArray[i] = scannerDigits.nextInt();
+            myArray[i] = digits.nextInt();
         }
-        scannerDigits.close();
+        digits.close();
 
-        printArrayOfDigits(myArray);
+        printDigits(myArray);
     }
 
-    public static void printArrayOfDigits(int[] oneMoreArray) {
-        System.out.println(java.util.Arrays.toString(oneMoreArray));
+    public static void printDigits(int[] mySecondArray) {
+        System.out.println(Arrays.toString(mySecondArray));
     }
+
+
 }
