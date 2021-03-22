@@ -9,14 +9,14 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        Scanner digits = new Scanner(System.in);
+        Scanner enterDigits = new Scanner(System.in);
         System.out.println("Введите 5 чисел: ");
 
         int[] myArray = new int[5];
         for (int i = 0; i < myArray.length; i++) {
-            myArray[i] = digits.nextInt();
+            myArray[i] = enterDigits.nextInt();
         }
-        digits.close();
+        enterDigits.close();
 
         printDigits(myArray);
     }
@@ -24,6 +24,5 @@ public class Task2 {
     public static void printDigits(int[] mySecondArray) {
         System.out.println(Arrays.toString(mySecondArray));
     }
-
 
 }

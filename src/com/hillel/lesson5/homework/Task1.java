@@ -13,7 +13,7 @@ public class Task1 {
         String name = scannerName.nextLine();
         scannerName.close();
 
-        if (name.equalsIgnoreCase("Hillel")){
+        if (name.equalsIgnoreCase("Hillel")) {
             System.out.println("Добро пожаловать на курс " + name);
         } else {
             System.out.println("Дoбро пожаловать " + name);
