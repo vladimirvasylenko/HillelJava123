@@ -10,6 +10,7 @@ public class Task6 {
 
         int min = myList[0];
         for (int i = 0; i < myList.length; i++) {
+
             if (myList[i] < min) {
                 min = myList[i];
             }
