@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task2 {
@@ -16,75 +14,61 @@ public class Task2 {
     о После записи необходимо проверить все ли записалось и вывести сообщение об успешной записи;
     о В завершение необходимо считать стих из созданного файла и вывести в консоль.*/
 
-    static boolean testDirectory = new File("//Users//awesome//IdeaProjects//HillelJava//src//com//hillel//lesson6//homework//testDirectory").mkdir();
-    static String filePath = "//Users//awesome//IdeaProjects//HillelJava//src//com//hillel//lesson6//homework//testDirectory//myText.txt";
-
-
+    static boolean testDirectory = new File("C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson6\\homework\\testDirectory").mkdir();
+    static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson6\\homework\\testDirectory\\Text.txt";
 
     public static void main(String[] args) throws IOException {
-        myFileWriter(filePath);
-        myFileReader(filePath);
-        fileCheck(filePath);
-
-
-
-
+        fileWriter(filePath);
+        fileCheсker(filePath);
+        fileReader(filePath);
     }
 
-    private static void myFileWriter(String filePath) throws IOException {
+    private static void fileWriter(String filePath) throws IOException {
+
         FileWriter fileWriter = new FileWriter(filePath);
         fileWriter.write("А вот программисты, что всё притворяются,\n" +
                 "Что в умных программах вовсю разбираются,\n" +
                 "Но под прикрытием в игры играются,\n" +
                 "Пока сисадмин сеть наладить пытается.");
         fileWriter.close();
-
-//        if (filePath.equalsIgnoreCase("А вот программисты, что всё притворяются,\n " +
-//                "Что в умных программах вовсю разбираются,\n" +
-//                "Но под прикрытием в игры играются,\n" +
-//                "Пока сисадмин сеть наладить пытается.")) {
-//            System.out.println("ok");
-//        } else {
-//            System.out.println("fuck");
-//        }
-
     }
 
-    private static void fileCheck (String filePath) throws IOException{
-
-        char []myArray = new char[1000];
+    private static void fileCheсker(String filePath) throws IOException {
 
         FileReader fileReader = new FileReader(filePath);
-        fileReader.read(myArray);
+        Scanner fileScanner = new Scanner(fileReader);
 
-        for (int i = 0; i < myArray.length; i++) {
-            if (myArray)
+        while (fileScanner.hasNextLine()) {
+            String myStr = fileScanner.nextLine();
 
+            if (myStr.equalsIgnoreCase("А вот программисты, что всё притворяются,")) {
+                System.out.println("Firs string is written");
+            } else if (myStr.equalsIgnoreCase("Что в умных программах вовсю разбираются,")) {
+                System.out.println("Second string is written");
+            } else if (myStr.equalsIgnoreCase("Но под прикрытием в игры играются,")) {
+                System.out.println("Third string is written");
+            } else if (myStr.equalsIgnoreCase("Пока сисадмин сеть наладить пытается.")) {
+                System.out.println("Fourth string is written");
+            } else {
+                System.out.println("Something written incorrectly");
+            }
+        }
 
+        fileReader.close();
+        fileScanner.close();
+    }
+
+    private static void fileReader(String filePath) throws IOException {
+
+        FileReader fileReader = new FileReader(filePath);
+        Scanner fileScanner = new Scanner(fileReader);
+
+        while (fileScanner.hasNextLine()) {
+            String myStr = fileScanner.nextLine();
+            System.out.print("\n" + myStr);
         }
     }
 
-    private static void myFileReader(String filePath) throws IOException{
 
-//        FileReader fileReader = new FileReader(filePath);
-//        Scanner myFileScanner = new Scanner(fileReader);
-//
-////        while (myFileScanner.hasNext()){
-//            String myStr = myFileScanner.nextLine();
-//            if (myStr.equalsIgnoreCase("А вот программисты, что всё притворяются,")){
-//            }else if (myStr.equalsIgnoreCase("Что в умных программах вовсю разбираются,")){
-//            }else if (myStr.equalsIgnoreCase("Но под прикрытием в игры играются,")){
-//            }else if (myStr.equalsIgnoreCase("Пока сисадмин сеть наладить пытается.")){
-//                System.out.println("ALL is OK");
-//
-//            }else {System.out.println("FUCK IT !!!");}
-//        //}
-//
-//        fileReader.close();
-//        myFileScanner.close();
-        }
-
-
-
-    }
+}
 

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class WriteReadOperations {
 
-    static String pathToFile = "C:\\DevProjects\\HillelTest\\src\\com\\hillel\\lesson6\\myTextFile.txt";
+    static String pathToFile = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson6\\homework\\testDirectory\\Text.txt";
 
     public static void main(String[] args) throws IOException {
 
@@ -30,18 +30,18 @@ public class WriteReadOperations {
         fileWriter.close();
     }
 
-    private static void readFromFile(String pathToFile) throws IOException {
-        char[] myCharArray = new char[1000];
-
-
-        FileReader fileReader = new FileReader(pathToFile);
-        fileReader.read(myCharArray);
-
-        System.out.println("file have been read \n");
-        System.out.println(Arrays.toString(myCharArray));
-
-        fileReader.close();
-    }
+//    private static void readFromFile(String pathToFile) throws IOException {
+//        char[] myCharArray = new char[1000];
+//
+//
+//        FileReader fileReader = new FileReader(pathToFile);
+//        fileReader.read(myCharArray);
+//
+//        System.out.println("file have been read \n");
+//        System.out.println(Arrays.toString(myCharArray));
+//
+//        fileReader.close();
+//    }
 
     private static void readFromFileByScanner(String pathToFile) throws IOException {
 
