@@ -19,7 +19,6 @@ public class Task1 {
 
     public static void main(String[] args) {
         String myHomeworkString = " Hillel is my feature. I will be developer   ";
-//        String myHomeworkString2 = "Hillel is my feature. I will be DEVELOPER";
 
         System.out.println(myHomeworkString.isEmpty());
         System.out.println(myHomeworkString.length());
@@ -29,29 +28,14 @@ public class Task1 {
         System.out.println(myHomeworkString.charAt(myIndexOf));
         System.out.println(myHomeworkString.substring(33, 42));
 
-        System.out.println(myHomeworkString.concat("!"));
-
         StringBuilder myHomeworkAnotherString = new StringBuilder(myHomeworkString);
         myHomeworkAnotherString.append("!");
-        System.out.println(myHomeworkAnotherString);
-
 
         boolean equalseWthoutIgnoreCase = myHomeworkString.equals("Hillel is my feature. I will be DEVELOPER");
         boolean equalseWthIgnoreCase = myHomeworkString.trim().equalsIgnoreCase("Hillel is my feature. I will be DEVELOPER");
 
-//        System.out.println(equalseWthoutIgnoreCase);
-//        System.out.println(equalseWthIgnoreCase);
-
         System.out.println(myHomeworkString.toLowerCase());
         System.out.println(myHomeworkString.toUpperCase());
-
-
-
-
-
-
-
-
 
     }
 }
