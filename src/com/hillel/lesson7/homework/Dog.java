@@ -6,28 +6,45 @@ public class Dog {
     public int age;
     public String color;
 
-    public Dog(){
-        String name = this.name;
-        int age = this.age;
-        String color = this.color;
+    public Dog() {
     }
 
-    public String getName(){
-        return name;
-    }
-    public void setName(String name){
+    public Dog(String name) {
         this.name = name;
     }
-    public int getAge(){
-        return age;
-    }
-    public void setAge(int age){
+
+    public Dog(String name, int age) {
+        this.name = name;
         this.age = age;
     }
-    public String getColor(){
+
+    public Dog(String name, int age, String color) {
+        this.name = name;
+        this.age = age;
+        this.color = color;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getColor() {
         return color;
     }
-    public void setColor(String color){
+
+    public void setColor(String color) {
         this.color = color;
     }
 

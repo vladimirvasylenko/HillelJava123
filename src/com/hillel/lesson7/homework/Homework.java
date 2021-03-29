@@ -17,29 +17,47 @@ public class Homework {
 
     public static void main(String[] args) {
 
-        Cat tom = new Cat();
-        tom.setName("Tom");
-        tom.setAge(5);
-        tom.setColor("grey");
+        Cat cat = new Cat();
+        Cat max = new Cat("Max");
+        Cat lux = new Cat("Lux", 5);
+        Cat fox = new Cat("Fox", 5, "black");
 
-        System.out.println(tom.name);
-        System.out.println(tom.age);
-        System.out.println(tom.color);
-        System.out.println(tom.getName());
-        System.out.println(tom.getAge());
-        System.out.println(tom.getColor());
+        cat.name = "Tom";
+        cat.age = 4;
+        cat.color = "grey";
 
-        Dog casper = new Dog();
-        casper.setName("Casper");
-        casper.setAge(10);
-        casper.setColor("Black");
+        System.out.println(cat.name);
+        System.out.println(cat.age);
+        System.out.println(cat.color);
 
-        System.out.println("\n" + casper.name);
-        System.out.println(casper.age);
-        System.out.println(casper.color);
-        System.out.println(casper.getName());
-        System.out.println(casper.getAge());
-        System.out.println(casper.getColor());
+        cat.setName("Flex");
+        cat.setAge(6);
+        cat.setColor("white");
+
+        System.out.println("\n" + cat.getName());
+        System.out.println(cat.getAge());
+        System.out.println(cat.getColor());
+
+        Dog dog = new Dog();
+        Dog muhtar = new Dog("Muhtar");
+        Dog jac = new Dog("Jac", 10);
+        Dog john = new Dog("John", 8, "black");
+
+        dog.setName("Casper");
+        dog.setAge(10);
+        dog.setColor("Black");
+
+        System.out.println("\n" + dog.getName());
+        System.out.println(dog.getAge());
+        System.out.println(dog.getColor());
+
+        dog.name = "Luis";
+        dog.age = 15;
+        dog.color = "red";
+
+        System.out.println("\n" + dog.name);
+        System.out.println(dog.age);
+        System.out.println(dog.color);
 
 
     }
