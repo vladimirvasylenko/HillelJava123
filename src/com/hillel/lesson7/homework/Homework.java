@@ -18,9 +18,9 @@ public class Homework {
     public static void main(String[] args) {
 
         Cat tom = new Cat();
-        tom.setName("Tom");
-        tom.setAge(5);
-        tom.setColor("grey");
+        tom.name = "Tom";
+        tom.age = 5;
+        tom.color = "grey";
 
         System.out.println(tom.name);
         System.out.println(tom.age);
@@ -30,9 +30,9 @@ public class Homework {
         System.out.println(tom.getColor());
 
         Dog casper = new Dog();
-        casper.setName("Casper");
-        casper.setAge(10);
-        casper.setColor("Black");
+        casper.name = "Casper";
+        casper.age = 10;
+        casper.color = "Black";
 
         System.out.println("\n" + casper.name);
         System.out.println(casper.age);
