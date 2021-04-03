@@ -22,13 +22,13 @@ public class Homework {
         Cat lux = new Cat("Lux", 5);
         Cat fox = new Cat("Fox", 5, "black");
 
-        cat.name = "Tom";
-        cat.age = 4;
-        cat.color = "grey";
-
-        System.out.println(cat.name);
-        System.out.println(cat.age);
-        System.out.println(cat.color);
+//        max.name = "Tom";
+//        cat.age = 4;
+//        cat.color = "grey";
+//
+//        System.out.println(cat.name);
+//        System.out.println(cat.age);
+//        System.out.println(cat.color);
 
         cat.setName("Flex");
         cat.setAge(6);
@@ -51,13 +51,13 @@ public class Homework {
         System.out.println(dog.getAge());
         System.out.println(dog.getColor());
 
-        dog.name = "Luis";
-        dog.age = 15;
-        dog.color = "red";
-
-        System.out.println("\n" + dog.name);
-        System.out.println(dog.age);
-        System.out.println(dog.color);
+//        dog.name = "Luis";
+//        dog.age = 15;
+//        dog.color = "red";
+//
+//        System.out.println("\n" + dog.name);
+//        System.out.println(dog.age);
+//        System.out.println(dog.color);
 
 
     }

@@ -1,6 +1,6 @@
 package com.hillel.lesson8.classwork;
 
-public class IncapsulationExample {
+public class  IncapsulationExample {
 
     private String name;
 

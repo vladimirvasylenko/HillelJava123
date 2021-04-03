@@ -1,17 +1,12 @@
 package com.hillel.lesson8.homework;
 
-import java.util.Random;
-
-public class Table {
+public class Chair {
 
     private String brand;
     private String color;
     private int size;
 
-    public Table() {
-    }
-
-    public Table(String brand, String color, int size) {
+    public Chair(String brand, String color, int size) {
         this.brand = brand;
         this.color = color;
         this.size = size;
@@ -43,10 +38,10 @@ public class Table {
 
     @Override
     public String toString() {
-        return "Table{" +
+        return "Chair{" +
                 "brand='" + brand + '\'' +
                 ", color='" + color + '\'' +
-                ", size='" + size + '\'' +
+                ", size=" + size +
                 '}';
     }
 }

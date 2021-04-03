@@ -2,9 +2,9 @@ package com.hillel.lesson7.homework;
 
 public class Cat {
 
-    public String name;
-    public int age;
-    public String color;
+    private String name;
+    private int age;
+    private String color;
 
     public Cat() {
     }

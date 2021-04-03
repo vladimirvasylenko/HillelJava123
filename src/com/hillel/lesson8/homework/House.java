@@ -2,17 +2,17 @@ package com.hillel.lesson8.homework;
 
 public class House {
     /*· Создайте класс House. Заполните Ваш новый дом “мебелью”(подсказка: отдельные классы), для примера достаточно до 5 вещей.
-    У каждой вещи также должно быть пару характеристик.
-    · Создайте класс с 3 параметрами final. Создайте в нем конструктор по-умолчанию и конструктор со всеми параметрами.
-      Создайте для всех полей getter и setter.
-      ps: Задание с подвохом. Если что-то заметили, закомментируйте эту  часть кода и напишите комментарий.
-      · Создайте новый класс, у которого должно быть 9 переменных (8 примитивов + String);
-      Для каждой переменной напишите getter и setter;
-      Напишите конструкторы начиная от конструктора по-умолчанию до конструктора с 9 параметрами;*/
+    У каждой вещи также должно быть пару характеристик.*/
+
+    static final String BRAND = "IKEA";
 
     public static void main(String[] args) {
-        Table table_1 = new Table("IKEA", "white", 120);
-        System.out.println(table_1);
+        Table table = new Table(BRAND,"white",120);
+        Chair chair = new Chair(BRAND, "white", 40);
+        Cupboard cupboard = new Cupboard(BRAND, "grey", 150);
+        Sofa sofa = new Sofa(BRAND, "black", 130);
+        Bed bed = new Bed("Skandi Wood", "brown", 200);
+
     }
 }
 
