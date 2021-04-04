@@ -96,70 +96,42 @@ public class Task3 {
     }
 
     public Task3(byte a, short b) {
-        this.a = a;
+        this((byte) 1);
         this.b = b;
     }
 
     public Task3(byte a, short b, int c) {
-        this.a = a;
-        this.b = b;
+        this((byte) 1, (short) 2);
         this.c = c;
     }
 
     public Task3(byte a, short b, int c, long d) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this((byte) 1, (short) 2, 3);
         this.d = d;
     }
 
     public Task3(byte a, short b, int c, long d, double e) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
+        this((byte) 1, (short) 2, 3, 4);
         this.e = e;
     }
 
     public Task3(byte a, short b, int c, long d, double e, float f) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
+        this((byte) 1, (short) 2, 3, 4, 5.1);
         this.f = f;
     }
 
     public Task3(byte a, short b, int c, long d, double e, float f, char g) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
+        this((byte) 1, (short) 2, 3, 4, 5.1, 6.1f);
         this.g = g;
     }
 
     public Task3(byte a, short b, int c, long d, double e, float f, char g, boolean h) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-        this.g = g;
+        this((byte) 1, (short) 2, 3, 4, 5.1, 6.1f, (char) 7);
         this.h = h;
     }
 
     public Task3(byte a, short b, int c, long d, double e, float f, char g, boolean h, String i) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-        this.g = g;
-        this.h = h;
+        this((byte) 1, (short) 2, 3, 4, 5.1, 6.1f, (char) 7, true);
         this.i = i;
     }
 }
