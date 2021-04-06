@@ -21,7 +21,7 @@ public class Task2 {
         return PARAMETER_1;
     }
 
-//    cant set PARAMETER 1,2,3 - because they are static.
+//    can't set PARAMETER 1,2,3 - because they are static.
 
 //    public void setParameter1(){
 //        this.PARAMETER_1 = PARAMETER_1;

@@ -134,4 +134,48 @@ public class Task3 {
         this((byte) 1, (short) 2, 3, 4, 5.1, 6.1f, (char) 7, true);
         this.i = i;
     }
+
+//    public Task3(short b){
+//        this((byte) 1);
+//        this.b = b;
+//    }
+//
+//    public Task3(byte a, short b, int c){
+//        this.a = a;
+//        this.b = b;
+//        this.c = c;
+//    }
+//
+//    public Task3(long d){
+//        this((byte) 1, (short) 2, 45);
+//        this.d = d;
+//    }
+//
+//    public Task3(byte a, short b, int c, long d, double e){
+//        this.a = a;
+//        this.b = b;
+//        this.c = c;
+//        this.d = d;
+//        this.e = e;
+//    }
+//
+//    public Task3(float f){
+//        this((byte) 1, (short) 2, 45,0,0);
+//        this.f = f;
+//    }
+//
+//    public Task3(byte a, short b, int c, long d, double e, float f, char g){
+//        this.a = a;
+//        this.b = b;
+//        this.c = c;
+//        this.d = d;
+//        this.e = e;
+//        this.f = f;
+//        this.g = g;
+//    }
+//
+//    public Task3(boolean h){
+//        this((byte) 1, (short) 2, 45,0,0, 0, (char)0);
+//        this.h = h;
+
 }
