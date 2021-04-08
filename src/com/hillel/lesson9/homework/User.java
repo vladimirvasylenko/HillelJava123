@@ -31,7 +31,7 @@ public class User {
      Support = написать строку + проверить наличие этой строки в файле
      Admin = написать строку + проверить + удалить файл, если такая строка найдена.*/
 
-    static String filePath = "/Users/awesome/IdeaProjects/HillelJava/src/com/hillel/lesson9/homework/Text.txt";
+    static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava1\\src\\com\\hillel\\lesson9\\homework\\Text.txt";
 
     private String name;
     private String surname;

@@ -11,38 +11,43 @@ public final class Support extends User {
         super(name, surname, mail, password, sex, country);
     }
 
-//     public static String checkingString(){
-//         Scanner myScanner = new Scanner(System.in);
-//         System.out.println("Введите строку для проверки : ");
-//         String str = myScanner.nextLine();
-//         return str;
-//     }
+    String myString = checkingString();
 
-    public static boolean textChecker() throws IOException {
+     public static String checkingString(){
+         Scanner myScanner = new Scanner(System.in);
+         System.out.println("Введите строку для проверки : ");
+         return myScanner.nextLine();
+     }
 
-        Scanner myScanner = new Scanner(System.in);
-        System.out.println("Введите строку для проверки : ");
-        String str = myScanner.nextLine();
+
+    public static boolean textChecker(String myString) throws IOException {
+
+//        Scanner myScanner = new Scanner(System.in);
+//        System.out.println("Введите строку для проверки : ");
+//        String str = myScanner.nextLine();
+
+        boolean test = false;
 
         FileReader myFileReader = new FileReader(filePath);
         Scanner scannerCheck = new Scanner(myFileReader);
         String checkStr = scannerCheck.nextLine();
 
-        boolean result = false;
-
-
 
         while (scannerCheck.hasNextLine()){
-            if (checkStr.equalsIgnoreCase(str)) {
-                result = true;
-            }else result = false;
+            if (checkStr.equalsIgnoreCase(myString)) {
+                return test = true;
+            }
         }
 
-        myScanner.close();
+//        myScanner.close();
         myFileReader.close();
         scannerCheck.close();
 
-        return result;
+        return test;
+
+
+
+
 
 //        return textChecker();
 
