@@ -1,5 +1,6 @@
 package com.hillel.lesson9.homework;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -112,7 +113,7 @@ public class User {
                 '}';
     }
 
-    public final static void textReader() {
+    public final void textReader() {
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Entered you text: ");
         String myText = myScanner.nextLine();
@@ -131,6 +132,5 @@ public class User {
         myScanner.close();
         myFileWriter.close();
     }
-
 
 }
