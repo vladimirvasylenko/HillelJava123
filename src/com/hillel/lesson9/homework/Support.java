@@ -15,15 +15,15 @@ public final class Support extends User {
 
 
 
-//     public static String checkingString(){
-//         Scanner myScanner = new Scanner(System.in);
-//         System.out.println("Введите строку для проверки : ");
-//         String str = myScanner.nextLine();
-//         myScanner.close();
-//         return str;
-//     }
+     public String checkingString(){
+         Scanner myScanner = new Scanner(System.in);
+         System.out.println("Введите строку для проверки : ");
+         String str = myScanner.nextLine();
+         myScanner.close();
+         return str;
+     }
 
-    public static boolean textChecker(String str) throws IOException {
+    public boolean textChecker(String str) throws IOException {
 
         FileReader myFileReader = new FileReader(filePath);
         Scanner scannerCheck = new Scanner(myFileReader);

@@ -13,7 +13,7 @@ public final class Admin extends User{
     }
 
 
-    public static String textCheckAndDelete(boolean textChecker) throws IOException {
+    public  String textCheckAndDelete(boolean textChecker) throws IOException {
 
         if (textChecker == true){
             FileWriter fileWriter = new FileWriter(filePath);
