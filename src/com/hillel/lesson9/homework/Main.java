@@ -35,15 +35,20 @@ public class Main {
         Support support = new Support();
         Admin admin = new Admin();
 
+        boolean userIsSupport = user instanceof Support;
+        boolean supportIsUser = support instanceof User;
+        boolean userIsAdmin = user instanceof Admin;
+        boolean adminIsUser = admin instanceof User;
+
+//        String str = support.checkingString();
+//        boolean textChecker = support.textChecker(str);
 
 
-
+//        user.textReader();
         user.textWriter();
 
-        user.textReader();
-//        String str = support.checkingString();
 //        support.textChecker(str);
-//        boolean textChecker = support.textChecker(str);
+//
 //        admin.textCheckAndDelete(textChecker);
 
     }

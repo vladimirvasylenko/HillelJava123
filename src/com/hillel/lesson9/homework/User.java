@@ -1,12 +1,10 @@
 package com.hillel.lesson9.homework;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class User {
-
 
     static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava1\\src\\com\\hillel\\lesson9\\homework\\Text.txt";
 
@@ -98,6 +96,7 @@ public class User {
     }
 
     public void textWriter() throws IOException {
+
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Entered you text: ");
         String myText = myScanner.nextLine();

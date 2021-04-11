@@ -22,4 +22,17 @@ public class Main {
 
     ·В классе Main создайте экземпляры всех классов и интерфейсов, запишите
     значения характеристик там где возможно и вызовите все реализованные дополнительные методы в них.*/
+
+    public static void main(String[] args) {
+        Iphone iphone = new Iphone("apple", 2021, "iOS", "white", "12", 128);
+        System.out.println(iphone);
+        iphone.call();
+        iphone.goingToInternet();
+        iphone.callingFaceTime();
+
+
+
+    }
+
+
 }
