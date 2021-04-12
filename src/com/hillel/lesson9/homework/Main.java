@@ -1,6 +1,7 @@
 package com.hillel.lesson9.homework;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
     /*·  Создайте класс User, у которого будет несколько полей(имя, фамилия, почта, пароль, пол, страна).
@@ -29,6 +30,8 @@ public class Main {
      Support = написать строку + проверить наличие этой строки в файле
      Admin = написать строку + проверить + удалить файл, если такая строка найдена.*/
 
+    public static final Scanner myScanner = new Scanner(System.in);
+
     public static void main(String[] args) throws IOException {
 
         User user = new User();
@@ -40,16 +43,16 @@ public class Main {
         boolean userIsAdmin = user instanceof Admin;
         boolean adminIsUser = admin instanceof User;
 
-//        String str = support.checkingString();
-//        boolean textChecker = support.textChecker(str);
-
-
-//        user.textReader();
+        user.textReader();
         user.textWriter();
 
-//        support.textChecker(str);
-//
-//        admin.textCheckAndDelete(textChecker);
+        String str = support.checkingString();
+        support.textChecker(str);
+
+        boolean textChecker = support.textChecker(str);
+        admin.textCheckAndDelete(textChecker);
+
+        Main.myScanner.close();
 
     }
 

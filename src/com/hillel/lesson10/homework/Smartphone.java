@@ -35,4 +35,13 @@ public abstract class Smartphone extends Phone {
     public void goingToInternet() {
         System.out.println("https://www.google.com/");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Smartphone{" +
+                "operationSystem='" + operationSystem + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
 }

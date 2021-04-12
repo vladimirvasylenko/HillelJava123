@@ -29,4 +29,13 @@ public abstract class Phone {
     public void call() {
         System.out.println("phone is calling");
     }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "brand='" + brand + '\'' +
+                ", yearOfIssue=" + yearOfIssue +
+                '}';
+    }
 }
+

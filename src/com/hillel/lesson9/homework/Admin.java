@@ -13,14 +13,18 @@ public final class Admin extends User{
     }
 
 
-    public  String textCheckAndDelete(boolean textChecker) throws IOException {
+
+    public String textCheckAndDelete(boolean textChecker) throws IOException {
 
         if (textChecker == true){
             FileWriter fileWriter = new FileWriter(filePath);
             fileWriter.write("");
             fileWriter.close();
-            return "Deleted";
-        } return "not Deleted";
+            System.out.println("You file is deleted");
+            return "You file is deleted";
+        }
+        System.out.println("You file isn't deleted");
+        return "You file isn't deleted";
 
     }
 }

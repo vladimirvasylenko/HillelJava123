@@ -27,11 +27,7 @@ public final class Android extends Smartphone{
 
     @Override
     public String toString() {
-        return "Android{" +
-                "brand='" + getBrand() + '\'' +
-                ", yearOfIssue='" + getYearOfIssue() + '\'' +
-                ", operationSystem='" + getOperationSystem() + '\'' +
-                ", color='" + getColor() + '\'' +
+        return super.toString() + "Android{" +
                 "model='" + model + '\'' +
                 ", storage=" + storage +
                 '}';

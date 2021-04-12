@@ -43,12 +43,8 @@ public final class Iphone extends Smartphone {
 
     @Override
     public String toString() {
-        return "Iphone{" +
-                "brand='" + getBrand() + '\'' +
-                ", yearOfIssue='" + getYearOfIssue() + '\'' +
-                ", operationSystem='" + getOperationSystem() + '\'' +
-                ", color='" + getColor() + '\'' +
-                ", model='" + model + '\'' +
+        return super.toString() + "Iphone{" +
+                "model='" + model + '\'' +
                 ", storage=" + storage +
                 '}';
     }

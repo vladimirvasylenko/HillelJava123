@@ -13,32 +13,29 @@ public final class Support extends User {
         super(name, surname, mail, password, sex, country);
     }
 
+    public String checkingString() {
 
-
-     public String checkingString(){
-         Scanner myScanner = new Scanner(System.in);
-         System.out.println("Введите строку для проверки : ");
-         String str = myScanner.nextLine();
-         myScanner.close();
-         return str;
-     }
+        System.out.println("Введите строку для проверки : ");
+        String str = Main.myScanner.nextLine();
+        return str;
+    }
 
     public boolean textChecker(String str) throws IOException {
 
         FileReader myFileReader = new FileReader(filePath);
-        Scanner scannerCheck = new Scanner(myFileReader);
+        Scanner fileScan = new Scanner(myFileReader);
 
-        while (scannerCheck.hasNextLine()){
-            String checkStr = scannerCheck.nextLine();
+        while (fileScan.hasNextLine()) {
+            String checkStr = fileScan.nextLine();
             if (checkStr.equalsIgnoreCase(str)) {
+                System.out.println("Файл содержит : " + checkingString());
                 return true;
             }
         }
 
         myFileReader.close();
-        scannerCheck.close();
-
+        fileScan.close();
+        System.out.println("Файл не содержит : " + checkingString());
         return false;
-
     }
 }
