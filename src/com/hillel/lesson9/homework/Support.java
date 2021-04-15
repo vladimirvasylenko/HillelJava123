@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public final class Support extends User {
 
+    static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson9\\homework\\Text.txt";
+
     public Support() {
     }
 

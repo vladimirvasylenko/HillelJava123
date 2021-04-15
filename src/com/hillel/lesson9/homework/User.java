@@ -2,7 +2,6 @@ package com.hillel.lesson9.homework;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class User {
 
@@ -104,4 +103,6 @@ public class User {
 
         myFileWriter.close();
     }
+
+
 }

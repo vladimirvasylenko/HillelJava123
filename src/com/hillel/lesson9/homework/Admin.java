@@ -15,7 +15,6 @@ public final class Admin extends User{
 
 
 
-
     public String textCheckAndDelete(boolean textChecker) throws IOException {
 
         if (textChecker == true){
