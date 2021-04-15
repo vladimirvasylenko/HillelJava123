@@ -15,10 +15,11 @@ public final class Support extends User {
 
     public String checkingString() {
 
-        System.out.println("Введите строку для проверки : ");
+        System.out.println("Entered text for checking : ");
         String str = Main.myScanner.nextLine();
         return str;
     }
+
 
     public boolean textChecker(String str) throws IOException {
 
@@ -28,14 +29,14 @@ public final class Support extends User {
         while (fileScan.hasNextLine()) {
             String checkStr = fileScan.nextLine();
             if (checkStr.equalsIgnoreCase(str)) {
-                System.out.println("Файл содержит : " + checkingString());
+                System.out.println("You file has : " + str);
                 return true;
             }
         }
 
         myFileReader.close();
         fileScan.close();
-        System.out.println("Файл не содержит : " + checkingString());
+        System.out.println("You file has not : " + str);
         return false;
     }
 }

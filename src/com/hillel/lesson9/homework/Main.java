@@ -23,37 +23,36 @@ public class Main {
     ·  У класса Admin реализовать другой метод-удаления. Данный метод на вход получает значение “содержит/ не содержит”
     и в зависимости от этого значения удаляет файл(если содержит).
 
-    ·  Далее имея все необходимые классы, зная принцип “динамической диспетчеризации методов”
-    и команду “instanceof” создайте метод,
-     который будет принимать на вход User(какого-то) и в зависимости от типа вызывать методы:
-     User = написать строку
-     Support = написать строку + проверить наличие этой строки в файле
-     Admin = написать строку + проверить + удалить файл, если такая строка найдена.*/
+    ·  Далее имея все необходимые классы, зная принцип “динамической диспетчеризации методов” и команду “instanceof”
+    создайте метод, который будет принимать на вход User(какого-то) и в зависимости от типа вызывать методы:
+    User = написать строку
+    Support = написать строку + проверить наличие этой строки в файле
+    Admin = написать строку + проверить + удалить файл, если такая строка найдена.*/
 
     public static final Scanner myScanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
 
+        System.out.println("User is started");
         User user = new User();
-        Support support = new Support();
-        Admin admin = new Admin();
-
-        boolean userIsSupport = user instanceof Support;
-        boolean supportIsUser = support instanceof User;
-        boolean userIsAdmin = user instanceof Admin;
-        boolean adminIsUser = admin instanceof User;
-
         user.textReader();
         user.textWriter();
 
+        System.out.println("Support is started");
+        Support support = new Support();
         String str = support.checkingString();
         support.textChecker(str);
 
+        System.out.println("Admin is started");
+        Admin admin = new Admin();
         boolean textChecker = support.textChecker(str);
         admin.textCheckAndDelete(textChecker);
 
+//        boolean userIsSupport = user instanceof Support;
+//        boolean supportIsUser = support instanceof User;
+//        boolean userIsAdmin = user instanceof Admin;
+//        boolean adminIsUser = admin instanceof User;
+
         Main.myScanner.close();
-
     }
-
 }

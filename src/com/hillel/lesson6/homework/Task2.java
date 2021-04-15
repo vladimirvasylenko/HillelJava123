@@ -18,12 +18,12 @@ public class Task2 {
     static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson6\\homework\\testDirectory\\Text.txt";
 
     public static void main(String[] args) throws IOException {
-        fileWriter(filePath);
-        fileCheсker(filePath);
+//        fileWriter(filePath);
+//        fileCheсker(filePath);
         fileReader(filePath);
     }
 
-    private static void fileWriter(String filePath) throws IOException {
+    private void fileWriter(String filePath) throws IOException {
 
         FileWriter fileWriter = new FileWriter(filePath);
         fileWriter.write("А вот программисты, что всё притворяются,\n" +
@@ -33,7 +33,7 @@ public class Task2 {
         fileWriter.close();
     }
 
-    private static void fileCheсker(String filePath) throws IOException {
+    private void fileCheсker(String filePath) throws IOException {
 
         FileReader fileReader = new FileReader(filePath);
         Scanner fileScanner = new Scanner(fileReader);
