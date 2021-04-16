@@ -37,43 +37,29 @@ public class Main {
         Support support = new Support();
         Admin admin = new Admin();
 
-        User user1 = new Admin();
+        user.textWriter();
 
-//        System.out.println("User is started");
-//
-//        user.textReader();
-//        user.textWriter();
-//
-//        System.out.println("Support is started");
-//
-//        String str = support.checkingString();
-//        support.textChecker(str);
-//
-//        System.out.println("Admin is started");
-//
-//        boolean textChecker = support.textChecker(str);
-//        admin.textCheckAndDelete(textChecker);
-
-//        boolean userIsSupport = user instanceof Support;
-//        boolean supportIsUser = support instanceof User;
-//        boolean userIsAdmin = user instanceof Admin;
-//        boolean adminIsUser = admin instanceof User;
-
+        System.out.println("User started");
         whatUser(user);
+
+        System.out.println("Support started");
         whatUser(support);
+
+        System.out.println("Admin started");
+        whatUser(admin);
 
         Main.myScanner.close();
     }
 
     private static void whatUser(User user) throws IOException {
-        if (user instanceof User) {
-            user.textReader();
-        }else if (user instanceof Support) {
+
+        if (user instanceof Support) {
             ((Support) user).textChecker(((Support) user).checkingString());
         } else if (user instanceof Admin){
-         user.te
+            ((Admin) user).textCheckAndDelete(((Admin) user).textChecker(((Admin) user).checkingString()));
+        } else if (user instanceof User) {
+            user.textReader();
         }
-
 
     }
 }

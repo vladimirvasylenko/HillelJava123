@@ -22,7 +22,6 @@ public final class Support extends User {
         return str;
     }
 
-
     public boolean textChecker(String str) throws IOException {
 
         FileReader myFileReader = new FileReader(filePath);
@@ -31,14 +30,14 @@ public final class Support extends User {
         while (fileScan.hasNextLine()) {
             String checkStr = fileScan.nextLine();
             if (checkStr.equalsIgnoreCase(str)) {
-                System.out.println("You file has : " + str);
+                System.out.println("You file have : " + str);
                 return true;
             }
         }
 
         myFileReader.close();
         fileScan.close();
-        System.out.println("You file has not : " + str);
+        System.out.println("You file haven't : " + str);
         return false;
     }
 }

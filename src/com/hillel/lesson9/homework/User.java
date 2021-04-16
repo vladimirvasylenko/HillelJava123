@@ -5,7 +5,6 @@ import java.io.IOException;
 
 public class User {
 
-
     static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson9\\homework\\Text.txt";
 
     private String name;
@@ -88,14 +87,14 @@ public class User {
     }
 
     public final void textReader() {
-        System.out.println("textReader Entered you text: ");
+        System.out.println("Entered you text: ");
         String myText = Main.myScanner.nextLine();
         System.out.println("You text is: ".concat(myText));
     }
 
     public void textWriter() throws IOException {
 
-        System.out.println("Write you text fo writing to file : ");
+        System.out.println("Enter you text fo writing to file : ");
         String myText = Main.myScanner.nextLine();
 
         FileWriter myFileWriter = new FileWriter(filePath);
