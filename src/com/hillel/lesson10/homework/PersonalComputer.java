@@ -29,5 +29,13 @@ public abstract class PersonalComputer {
     public void start(){
         System.out.println("PC is starting");
     }
+
+    @Override
+    public String toString() {
+        return "PersonalComputer{" +
+                "brand='" + brand + '\'' +
+                ", yearOfIssue=" + yearOfIssue +
+                '}';
+    }
 }
 
