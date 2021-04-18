@@ -26,6 +26,26 @@ public final class Android extends Smartphone{
     }
 
     @Override
+    public void startApp() {
+        System.out.println("Android is stared App");
+    }
+
+    @Override
+    public void closeApp() {
+        System.out.println("Android is closed App");
+    }
+
+    @Override
+    public void sendTelegramMessage() {
+        System.out.println("Android is send message");
+    }
+
+    @Override
+    public void readTelegramMessage() {
+        System.out.println("Android is reading message");
+    }
+
+    @Override
     public String toString() {
         return super.toString() + "Android{" +
                 "model='" + model + '\'' +

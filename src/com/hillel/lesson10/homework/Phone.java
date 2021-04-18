@@ -1,6 +1,6 @@
 package com.hillel.lesson10.homework;
 
-public abstract class Phone {
+public abstract class Phone implements Application, Telegram {
 
     private String brand;
     private int yearOfIssue;

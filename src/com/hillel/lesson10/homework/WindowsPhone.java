@@ -42,6 +42,26 @@ public final class WindowsPhone extends Smartphone{
     }
 
     @Override
+    public void startApp() {
+        System.out.println("WindowsPhone is stared App");
+    }
+
+    @Override
+    public void closeApp() {
+        System.out.println("WindowsPhone is closed App");
+    }
+
+    @Override
+    public void sendTelegramMessage() {
+        System.out.println("WindowsPhone is send message");
+    }
+
+    @Override
+    public void readTelegramMessage() {
+        System.out.println("WindowsPhone is reading message");
+    }
+
+    @Override
     public String toString() {
         return "WindowsPhone{" +
                 "brand='" + getBrand() + '\'' +

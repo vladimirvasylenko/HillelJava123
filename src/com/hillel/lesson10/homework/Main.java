@@ -25,10 +25,17 @@ public class Main {
 
     public static void main(String[] args) {
         Iphone iphone = new Iphone("apple", 2021, "iOS", "white", "12", 128);
+        Macbook macbook = new Macbook("apple",2021,"macOS", "Space gray", "Pro", 512);
+
         System.out.println(iphone);
         iphone.call();
         iphone.goingToInternet();
         iphone.callingFaceTime();
+
+
+
+
+
 
 
 

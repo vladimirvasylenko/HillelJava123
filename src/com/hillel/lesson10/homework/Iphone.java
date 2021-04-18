@@ -42,6 +42,26 @@ public final class Iphone extends Smartphone {
     }
 
     @Override
+    public void startApp() {
+        System.out.println("Iphone is stared App");
+    }
+
+    @Override
+    public void closeApp() {
+        System.out.println("Iphone is closed App");
+    }
+
+    @Override
+    public void sendTelegramMessage() {
+        System.out.println("Iphone is send message");
+    }
+
+    @Override
+    public void readTelegramMessage() {
+        System.out.println("Iphone is reading message");
+    }
+
+    @Override
     public String toString() {
         return super.toString() + "Iphone{" +
                 "model='" + model + '\'' +
