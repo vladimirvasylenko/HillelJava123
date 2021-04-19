@@ -24,21 +24,65 @@ public class Main {
     значения характеристик там где возможно и вызовите все реализованные дополнительные методы в них.*/
 
     public static void main(String[] args) {
-        Iphone iphone = new Iphone("apple", 2021, "iOS", "white", "12", 128);
-        Macbook macbook = new Macbook("apple",2021,"macOS", "Space gray", "Pro", 512);
 
-        System.out.println(iphone);
+        Iphone iphone = new Iphone("apple", 2021, "iOS", "white", "12", 128);
+        Android android = new Android("Samsung", 2021, "Android", "White", "S21", 256);
+        WindowsPhone windowsPhone = new WindowsPhone("Nokia", 2015, "Windows", "Black", "Lumia", 64);
+
+        Macbook macbook = new Macbook("apple", 2021, "macOS", "Space gray", "Pro", 512);
+        Ultrabook ultrabook = new Ultrabook("HP", 2020, "Windows", "Grey", "U2020", 1024);
+        GamingNotebook gamingNotebook = new GamingNotebook("Lenovo", 2021, "Windows", "Black", "Legion", "RTX3080");
+
         iphone.call();
         iphone.goingToInternet();
         iphone.callingFaceTime();
+        iphone.startApp();
+        iphone.sendTelegramMessage();
+        iphone.readTelegramMessage();
+        iphone.closeApp();
 
+        android.call();
+        android.goingToInternet();
+        android.callingDuo();
+        android.startApp();
+        android.sendTelegramMessage();
+        android.readTelegramMessage();
+        android.closeApp();
 
+        windowsPhone.call();
+        windowsPhone.goingToInternet();
+        windowsPhone.callingSkype();
+        windowsPhone.startApp();
+        windowsPhone.sendTelegramMessage();
+        windowsPhone.readTelegramMessage();
+        windowsPhone.closeApp();
 
+        macbook.start();
+        macbook.callingFaceTime();
+        macbook.goingToInternet();
+        macbook.startIntellijIdea();
+        macbook.startCoding();
+        macbook.stopCoding();
+        macbook.closeIntellijIdea();
+        macbook.charging();
 
+        ultrabook.start();
+        ultrabook.goingToInternet();
+        ultrabook.callingSkype();
+        ultrabook.startIntellijIdea();
+        ultrabook.startCoding();
+        ultrabook.stopCoding();
+        ultrabook.closeIntellijIdea();
+        ultrabook.charging();
 
-
-
-
+        gamingNotebook.start();
+        gamingNotebook.goingToInternet();
+        gamingNotebook.startingSkyrim();
+        gamingNotebook.startIntellijIdea();
+        gamingNotebook.startCoding();
+        gamingNotebook.stopCoding();
+        gamingNotebook.closeIntellijIdea();
+        gamingNotebook.charging();
     }
 
 

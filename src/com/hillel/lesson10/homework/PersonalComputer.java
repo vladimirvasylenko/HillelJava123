@@ -1,6 +1,6 @@
 package com.hillel.lesson10.homework;
 
-public abstract class PersonalComputer implements IntellijIdea, Coding {
+public abstract class PersonalComputer implements IntellijIdea, Coding, Charging {
 
     private String brand;
     private int yearOfIssue;

@@ -1,6 +1,6 @@
 package com.hillel.lesson10.homework;
 
-public final class Android extends Smartphone{
+public final class Android extends Smartphone {
 
     private String model;
     private int storage;
@@ -21,7 +21,7 @@ public final class Android extends Smartphone{
         super.goingToInternet();
     }
 
-    public void callingDuo(){
+    public void callingDuo() {
         System.out.println("calling Duo");
     }
 
