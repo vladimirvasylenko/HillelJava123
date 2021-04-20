@@ -9,5 +9,59 @@ public class House {
     Cupboard cupboard = new Cupboard("IKEA", "grey", 150);
     Sofa sofa = new Sofa("IKEA", "black", 130);
     Bed bed = new Bed("Skandi Wood", "brown", 200);
+
+    public House() {
+    }
+
+    public Table getTable() {
+        return table;
+    }
+
+    public void setTable(Table table) {
+        this.table = table;
+    }
+
+    public Chair getChair() {
+        return chair;
+    }
+
+    public void setChair(Chair chair) {
+        this.chair = chair;
+    }
+
+    public Cupboard getCupboard() {
+        return cupboard;
+    }
+
+    public void setCupboard(Cupboard cupboard) {
+        this.cupboard = cupboard;
+    }
+
+    public Sofa getSofa() {
+        return sofa;
+    }
+
+    public void setSofa(Sofa sofa) {
+        this.sofa = sofa;
+    }
+
+    public Bed getBed() {
+        return bed;
+    }
+
+    public void setBed(Bed bed) {
+        this.bed = bed;
+    }
+
+    @Override
+    public String toString() {
+        return "House{" +
+                "table=" + table +
+                ", chair=" + chair +
+                ", cupboard=" + cupboard +
+                ", sofa=" + sofa +
+                ", bed=" + bed +
+                '}';
+    }
 }
 
