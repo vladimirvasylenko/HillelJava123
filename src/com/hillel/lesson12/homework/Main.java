@@ -26,10 +26,8 @@ public class Main {
 
         List<Object> myList = new ArrayList<>();
 
-        System.out.println(myListAddOperation(myList));
-//        System.out.println(myListRemoveOperation(myList));
-
-
+        myListAddOperation(myList);
+        myListRemoveOperation(myList);
     }
 
     public static List myListAddOperation(List myList) {
@@ -58,34 +56,46 @@ public class Main {
         myList.add(0, homeworkClass2object2);
         myList.add(0, homeworkClass2object3);
 
-        HomeworkClass_3 homeworkClass3object1 = new HomeworkClass_3();
-        HomeworkClass_3 homeworkClass3object2 = new HomeworkClass_3();
-        HomeworkClass_3 homeworkClass3object3 = new HomeworkClass_3();
+        for (int i = myList.size() - 1; i > myList.size() - 4; i--) {
+            HomeworkClass_3 homeworkClass3object1 = new HomeworkClass_3();
+            myList.set(i, homeworkClass3object1);
 
-        for (int i = myList.size() -1; i > myList.size() - 3;) {
-            myList.set(i--, homeworkClass3object1);
-            myList.set(i--, homeworkClass3object2);
+            HomeworkClass_3 homeworkClass3object2 = new HomeworkClass_3();
+            myList.set(i, homeworkClass3object2);
+
+            HomeworkClass_3 homeworkClass3object3 = new HomeworkClass_3();
             myList.set(i, homeworkClass3object3);
         }
         return myList;
     }
 
-//    public static List myListRemoveOperation(List myList) {
-//
-//        int a = 0;
-//
-//
-//        Iterator<Object> iterator = myList.iterator();
-//
-//        while (iterator.hasNext()){
-//            if (iterator.next() instanceof HomeworkClass_1){
-//            }
-//        }
-//        myList
-//
-//        return myList;
-//    }
+    public static List myListRemoveOperation(List myList) {
 
+        int a = 0;
+        int b = 0;
+        int c = 0;
 
+        Iterator<Object> iterator = myList.iterator();
 
+        while (iterator.hasNext()) {
+            Object next = iterator.next();
+            if (next instanceof HomeworkClass_1) {
+                a++;
+                if (a > 2) {
+                    iterator.remove();
+                }
+            } else if (next instanceof HomeworkClass_2) {
+                b++;
+                if (b > 2) {
+                    iterator.remove();
+                }
+            } else if (next instanceof HomeworkClass_3) {
+                c++;
+                if (c > 2) {
+                    iterator.remove();
+                }
+            }
+        }
+        return myList;
     }
+}
