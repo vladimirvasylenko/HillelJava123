@@ -28,6 +28,7 @@ public class Main {
 
         myListAddOperation(myList);
         myListRemoveOperation(myList);
+        System.out.println(myList);
     }
 
     public static List myListAddOperation(List myList) {
@@ -89,7 +90,7 @@ public class Main {
                 if (b > 2) {
                     iterator.remove();
                 }
-            } else if (next instanceof HomeworkClass_3) {
+            } else  {
                 c++;
                 if (c > 2) {
                     iterator.remove();
