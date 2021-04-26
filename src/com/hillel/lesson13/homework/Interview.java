@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Interview {
-    static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson13\\MyFile.txt";
+    static String filePath = "C:\\Users\\vasyl\\IdeaProjects\\HillelJava\\src\\com\\hillel\\lesson13\\homework\\MyFile.txt";
 
     static String question_1 = "How old are you?";
     static String question_2 = "Where you from?";

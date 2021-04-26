@@ -1,6 +1,8 @@
 package com.hillel.lesson13.homework;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -25,7 +27,18 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Interview.questions();
+        List<Class_1> listClass_1 = new ArrayList<>();
+        listClass_1.add(new Class_1());
+
+        List<Class_2> listClass_2 = new ArrayList<>();
+        listClass_2.add(new Class_2());
+
+        List<Class_3> listClass_3 = new ArrayList<>();
+        listClass_3.add(new Class_3());
+
+    }
+
+    public static void myMethod(List<? extends Class_2> extendedList, List<? super Class_2> superList){
 
     }
 }
