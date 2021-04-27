@@ -7,22 +7,21 @@ import java.util.Scanner;
 
 public class ExceptionClass {
 
-    public void exception_1() throws FileNotFoundException {
+    public static void exception_1() throws FileNotFoundException {
 
         FileReader fileReader = new FileReader("D:\\abc.txt");
     }
 
-//    public void exception_2() {
-//
-//            AbstractClass abstractClass = new AbstractClass();
-//    }
+    public static void exception_2() {
 
-    public void exception_3() {
+        int num = Integer.parseInt("XYZ");
+    }
+
+    public static void exception_3() {
 
         Scanner scanner = new Scanner(System.in);
         scanner.close();
         String someLine = scanner.nextLine();
-
     }
 
 }

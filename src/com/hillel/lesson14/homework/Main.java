@@ -1,6 +1,8 @@
 package com.hillel.lesson14.homework;
 
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
     /*Создайте класс, в которому будут 3 отдельных метода, логика которых будет вызывать 3
@@ -20,9 +22,59 @@ public class Main {
     вызовы 3х методов промежуточного класса с разными ошибками).*/
 
     public static void main(String[] args) throws FileNotFoundException {
-        ExceptionClass exceptionClass = new ExceptionClass();
-//        exceptionClass.exception_3();
-        exceptionClass.exception_1();
+        ExceptionThrowClass exceptionThrowClass = new ExceptionThrowClass();
 
+        try {
+            exceptionThrowClass.exceptionThrowsMethod_1();
+            exceptionThrowClass.exceptionThrowsMethod_2();
+            exceptionThrowClass.exceptionThrowsMethod_3();
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFound exception is catch");
+        } finally {
+            System.out.println("First exception is catch");
+        }
+
+        try {
+            exceptionThrowClass.exceptionThrowsMethod_1();
+            exceptionThrowClass.exceptionThrowsMethod_2();
+            exceptionThrowClass.exceptionThrowsMethod_3();
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFound exception is catch");
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException exception is catch");
+        } finally {
+            System.out.println("First and second exceptions is catch");
+        }
+
+        try {
+            exceptionThrowClass.exceptionThrowsMethod_1();
+            exceptionThrowClass.exceptionThrowsMethod_2();
+            exceptionThrowClass.exceptionThrowsMethod_3();
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFound exception is catch");
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException exception is catch");
+        } catch (IllegalStateException e) {
+            System.out.println("IllegalStateException exception is catch");
+        } finally {
+            System.out.println("First, second and third exception is catch");
+        }
+
+        try {
+            FileReader fileReader = new FileReader("D:\\abc.txt");
+        } catch (IOException e) {
+            e.getStackTrace();
+        } finally {
+            System.out.println("Try with resources exception is catch");
+        }
+
+        try {
+            exceptionThrowClass.exceptionThrowsMethod_1();
+            exceptionThrowClass.exceptionThrowsMethod_2();
+            exceptionThrowClass.exceptionThrowsMethod_3();
+        } finally {
+            System.out.println("finally we are here!");
+        }
     }
+
 }
