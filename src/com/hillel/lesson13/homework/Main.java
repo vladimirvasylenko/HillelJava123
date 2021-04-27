@@ -36,9 +36,12 @@ public class Main {
         List<Class_3> listClass_3 = new ArrayList<>();
         listClass_3.add(new Class_3());
 
+        myMethod(listClass_3, listClass_1);
     }
 
-    public static void myMethod(List<? extends Class_2> extendedList, List<? super Class_2> superList){
+    public static void myMethod(List<? extends Class_3> extendedList, List<? super Class_1> superList) {
 
+        superList.addAll(extendedList);
+        System.out.println(superList);
     }
 }

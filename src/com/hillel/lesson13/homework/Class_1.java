@@ -10,14 +10,6 @@ public class Class_1 {
     private Set setInClass_1;
     private Map mapInClass_1;
 
-    List<Class_1> myListInClass_1 = new ArrayList<>();
-
-//    public Class_1(List listInClass_1, Set setInClass_1, Map mapInClass_1) {
-//        this.listInClass_1 = listInClass_1;
-//        this.setInClass_1 = setInClass_1;
-//        this.mapInClass_1 = mapInClass_1;
-//    }
-
     public List getListInClass_1() {
         return listInClass_1;
     }
