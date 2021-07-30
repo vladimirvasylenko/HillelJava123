@@ -4,8 +4,8 @@ public class Account {
 
     private int id;
     private int clientId;
-    private int number;
-    private int value;
+    private String number;
+    private double value;
 
     public int getId() {
         return id;
@@ -23,19 +23,19 @@ public class Account {
         this.clientId = clientId;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(double value) {
         this.value = value;
     }
 
@@ -44,7 +44,7 @@ public class Account {
         return "Account{" +
                 "id=" + id +
                 ", clientId=" + clientId +
-                ", number=" + number +
+                ", number='" + number + '\'' +
                 ", value=" + value +
                 '}';
     }
