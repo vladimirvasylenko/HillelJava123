@@ -7,6 +7,7 @@ public class Client {
     private String email;
     private long phone;
     private String about;
+    private int age;
 
     public int getId() {
         return id;
@@ -48,6 +49,14 @@ public class Client {
         this.about = about;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
@@ -56,6 +65,7 @@ public class Client {
                 ", email='" + email + '\'' +
                 ", phone=" + phone +
                 ", about='" + about + '\'' +
+                ", age=" + age +
                 '}';
     }
 }

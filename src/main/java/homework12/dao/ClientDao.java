@@ -2,6 +2,7 @@ package homework12.dao;
 
 import homework12.database.Database;
 import homework12.entities.Client;
+import homework12.entities.ClientStatus;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,14 +11,17 @@ import java.util.List;
 public class ClientDao {
 
     private static final String INSERT =
-            "INSERT INTO clients (name,email,phone,about) VALUES (?,?,?,?)";
+            "INSERT INTO clients (name,email,phone,about,age) VALUES (?,?,?,?,?)";
     private static final String CLIENTS = "SELECT * FROM clients ORDER BY id";
     private static final String UPDATE =
-            "UPDATE clients SET name=?, email=?, phone=?, about=? WHERE id=?";
+            "UPDATE clients SET name=?, email=?, phone=?, about=?, age=? WHERE id=?";
     private static final String DELETE_CLIENT = "DELETE FROM clients WHERE id=?";
     private static final String CLIENTS_BY_PHONE = "SELECT * FROM clients WHERE phone=?";
     private static final String CLIENTS_BY_ID_JOIN =
             "SELECT * FROM clients INNER JOIN accounts ON (clients.id = accounts.client_id)";
+    private static final String CLIENTS_STATUSES_WITH_AGE =
+            "SELECT c.name, c.email, s.alias from clients AS c INNER JOIN client_status cs ON c.id = cs.client_id " +
+                    "INNER JOIN statuses s ON cs.status_id = s.id WHERE c.age > '18'";
 
     public List<Client> findAllClients() {
         List<Client> resultList = new ArrayList<>();
@@ -34,6 +38,7 @@ public class ClientDao {
                     client.setEmail(resultSet.getString("email"));
                     client.setPhone(resultSet.getLong("phone"));
                     client.setAbout(resultSet.getString("about"));
+                    client.setAge(resultSet.getInt("age"));
 
                     resultList.add(client);
                 }
@@ -120,6 +125,7 @@ public class ClientDao {
                     client.setEmail(resultSet.getString("email"));
                     client.setPhone(resultSet.getLong("phone"));
                     client.setAbout(resultSet.getString("about"));
+                    client.setAge(resultSet.getInt("age"));
 
                     resultList1.add(client);
                 }
@@ -130,6 +136,29 @@ public class ClientDao {
         }
 
         return resultList1;
+    }
+
+    public List<ClientStatus> clientStatusWithAge() {
+        List<ClientStatus> resultList2 = new ArrayList<>();
+
+        try (Connection connection = Database.getConnection();
+             Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(CLIENTS_STATUSES_WITH_AGE);
+
+            while (resultSet.next()) {
+                ClientStatus clientStatus = new ClientStatus();
+                clientStatus.setClientName(resultSet.getString("name"));
+                clientStatus.setClientEmail(resultSet.getString("email"));
+                clientStatus.setStatusAlias(resultSet.getString("alias"));
+
+                resultList2.add(clientStatus);
+            }
+
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+
+        return resultList2;
     }
 
 

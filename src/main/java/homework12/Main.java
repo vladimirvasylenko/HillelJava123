@@ -3,6 +3,7 @@ package homework12;
 import homework12.dao.AccountDao;
 import homework12.dao.ClientDao;
 import homework12.entities.Client;
+import homework12.entities.ClientStatus;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +20,12 @@ public class Main {
 
         for (Client client1 : clientDao.findAllClientsByIdJoin()) {
             System.out.println(client1);
+        }
+
+        System.out.println();
+
+        for (ClientStatus clientStatus : clientDao.clientStatusWithAge()) {
+            System.out.println(clientStatus);
         }
 
     }
