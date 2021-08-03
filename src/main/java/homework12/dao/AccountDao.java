@@ -2,7 +2,6 @@ package homework12.dao;
 
 import homework12.database.Database;
 import homework12.entities.Account;
-import homework12.entities.Client;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,22 +20,20 @@ public class AccountDao {
     public List<Account> findAllAccounts() {
         List<Account> resultList = new ArrayList<>();
 
-        try (Connection connection = Database.getConnection()) {
-            assert connection != null;
-            try (Statement statement = connection.createStatement()) {
-                ResultSet resultSet = statement.executeQuery(ACCOUNT);
+        try (Connection connection = Database.getConnection();
+             Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(ACCOUNT);
 
-                while (resultSet.next()) {
-                    Account account = new Account();
-                    account.setId(resultSet.getInt("id"));
-                    account.setClientId(resultSet.getInt("clientId"));
-                    account.setNumber(resultSet.getString("number"));
-                    account.setValue(resultSet.getDouble("value"));
+            while (resultSet.next()) {
+                Account account = new Account();
+                account.setId(resultSet.getInt("id"));
+                account.setClientId(resultSet.getInt("clientId"));
+                account.setNumber(resultSet.getString("number"));
+                account.setValue(resultSet.getDouble("value"));
 
-                    resultList.add(account);
-                }
-
+                resultList.add(account);
             }
+
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
@@ -82,8 +79,8 @@ public class AccountDao {
 
     public List<String> findByValue(Double value) {
         List<String> resultList = new ArrayList<>();
-        try ( Connection connection = Database.getConnection();
-              PreparedStatement statement = connection.prepareStatement(ACCOUNT_BY_VALUE) ) {
+        try (Connection connection = Database.getConnection();
+             PreparedStatement statement = connection.prepareStatement(ACCOUNT_BY_VALUE)) {
             statement.setDouble(1, value);
             ResultSet resultSet = statement.executeQuery();
 

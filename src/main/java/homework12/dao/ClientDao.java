@@ -26,24 +26,22 @@ public class ClientDao {
     public List<Client> findAllClients() {
         List<Client> resultList = new ArrayList<>();
 
-        try (Connection connection = Database.getConnection()) {
-            assert connection != null;
-            try (Statement statement = connection.createStatement()) {
-                ResultSet resultSet = statement.executeQuery(CLIENTS);
+        try (Connection connection = Database.getConnection();
+             Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(CLIENTS);
 
-                while (resultSet.next()) {
-                    Client client = new Client();
-                    client.setId(resultSet.getInt("id"));
-                    client.setName(resultSet.getString("name"));
-                    client.setEmail(resultSet.getString("email"));
-                    client.setPhone(resultSet.getLong("phone"));
-                    client.setAbout(resultSet.getString("about"));
-                    client.setAge(resultSet.getInt("age"));
+            while (resultSet.next()) {
+                Client client = new Client();
+                client.setId(resultSet.getInt("id"));
+                client.setName(resultSet.getString("name"));
+                client.setEmail(resultSet.getString("email"));
+                client.setPhone(resultSet.getLong("phone"));
+                client.setAbout(resultSet.getString("about"));
+                client.setAge(resultSet.getInt("age"));
 
-                    resultList.add(client);
-                }
-
+                resultList.add(client);
             }
+
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
@@ -63,6 +61,7 @@ public class ClientDao {
             exception.printStackTrace();
         }
     }
+
     public void update(Client client) {
         try (Connection connection = Database.getConnection();
              PreparedStatement statement = connection.prepareStatement(UPDATE)) {
@@ -113,24 +112,22 @@ public class ClientDao {
     public List<Client> findAllClientsByIdJoin() {
         List<Client> resultList1 = new ArrayList<>();
 
-        try (Connection connection = Database.getConnection()) {
-            assert connection != null;
-            try (Statement statement = connection.createStatement()) {
-                ResultSet resultSet = statement.executeQuery(CLIENTS_BY_ID_JOIN);
+        try (Connection connection = Database.getConnection();
+             Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(CLIENTS_BY_ID_JOIN);
 
-                while (resultSet.next()) {
-                    Client client = new Client();
-                    client.setId(resultSet.getInt("id"));
-                    client.setName(resultSet.getString("name"));
-                    client.setEmail(resultSet.getString("email"));
-                    client.setPhone(resultSet.getLong("phone"));
-                    client.setAbout(resultSet.getString("about"));
-                    client.setAge(resultSet.getInt("age"));
+            while (resultSet.next()) {
+                Client client = new Client();
+                client.setId(resultSet.getInt("id"));
+                client.setName(resultSet.getString("name"));
+                client.setEmail(resultSet.getString("email"));
+                client.setPhone(resultSet.getLong("phone"));
+                client.setAbout(resultSet.getString("about"));
+                client.setAge(resultSet.getInt("age"));
 
-                    resultList1.add(client);
-                }
-
+                resultList1.add(client);
             }
+
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

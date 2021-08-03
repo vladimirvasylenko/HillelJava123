@@ -21,21 +21,19 @@ public class StatusDao {
     public List<Status> findAllStatuses() {
         List<Status> resultList = new ArrayList<>();
 
-        try (Connection connection = Database.getConnection()) {
-            assert connection != null;
-            try (Statement statement = connection.createStatement()) {
-                ResultSet resultSet = statement.executeQuery(STATUS);
+        try (Connection connection = Database.getConnection();
+             Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(STATUS);
 
-                while (resultSet.next()) {
-                    Status status = new Status();
-                    status.setId(resultSet.getInt("id"));
-                    status.setAlias(resultSet.getString("alias"));
-                    status.setDescription(resultSet.getString("description"));
+            while (resultSet.next()) {
+                Status status = new Status();
+                status.setId(resultSet.getInt("id"));
+                status.setAlias(resultSet.getString("alias"));
+                status.setDescription(resultSet.getString("description"));
 
-                    resultList.add(status);
-                }
-
+                resultList.add(status);
             }
+
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
