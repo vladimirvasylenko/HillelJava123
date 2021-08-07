@@ -22,6 +22,8 @@ public class ClientDao {
     private static final String CLIENTS_STATUSES_WITH_AGE =
             "SELECT c.name, c.email, s.alias from clients AS c INNER JOIN client_status cs ON c.id = cs.client_id " +
                     "INNER JOIN statuses s ON cs.status_id = s.id WHERE c.age > '18'";
+    private static final String CLIENTS_STATUSES_JOIN =
+            "SELECT * FROM clients INNER JOIN statuses ON (clients.id = statuses.id)";
 
     public List<Client> findAllClients() {
         List<Client> resultList = new ArrayList<>();
@@ -156,6 +158,29 @@ public class ClientDao {
         }
 
         return resultList2;
+    }
+
+    public List<ClientStatus> findAllClientsStatuses() {
+        List<homework12.entities.ClientStatus> resultList = new ArrayList<>();
+
+        try (Connection connection = Database.getConnection();
+             Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery(CLIENTS_STATUSES_JOIN);
+
+            while (resultSet.next()) {
+                homework12.entities.ClientStatus clientStatus = new homework12.entities.ClientStatus();
+                clientStatus.setClientName(resultSet.getString("name"));
+                clientStatus.setClientEmail(resultSet.getString("email"));
+                clientStatus.setStatusAlias(resultSet.getString("alias"));
+
+                resultList.add(clientStatus);
+            }
+
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+
+        return resultList;
     }
 
 
