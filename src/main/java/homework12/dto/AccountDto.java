@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class AccountDto {
 
-    private int clientId;
     private String number;
-    private int value;
+    private double value;
 }

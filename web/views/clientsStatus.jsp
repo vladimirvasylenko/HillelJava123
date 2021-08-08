@@ -2,15 +2,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Statuses</title>
+    <title>Clients Statuses</title>
 </head>
 <body>
 <table border="1">
-    <caption>Statuses</caption>
-    <c:forEach items="${statuses}" var="item">
+    <caption>Clients Statuses</caption>
+    <c:forEach items="${clientsStatuses}" var="item">
         <tr>
-            <td>${item.alias}</td>
-            <td>${item.description}</td>
+            <td>${item.clientName}</td>
+            <td>${item.clientEmail}</td>
+            <td>${item.statusAlias}</td>
         </tr>
     </c:forEach>
 </table>

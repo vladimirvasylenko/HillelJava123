@@ -20,8 +20,8 @@ public class AccountService {
 
         for (Account account: accounts) {
             AccountDto dto = new AccountDto();
-            dto.setClientId(account.getClientId());
             dto.setNumber(account.getNumber());
+            dto.setValue(account.getValue());
             result.add(dto);
         }
         return result;

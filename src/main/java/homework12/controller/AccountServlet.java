@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/accounts")
 public class AccountServlet extends HttpServlet {
     private final AccountService accountService = new AccountService();
 
